@@ -1,5 +1,7 @@
-#Played Before Yes/No Checker Component version 1
-#Version 1 of this Component does not include the Game Information for the Global Citizen Game
+#Played Before, Yes/No Checker, Game Information Component version 1
+#Version 1 of this Component does not include the Game Information
+#but has an area for where it should go for the Global Citizen Game
+#Will be added in further developments of this component in the future when idea of game is further synthesized
 
 #Yes/No Checker
 #Check If the User's input is valid
