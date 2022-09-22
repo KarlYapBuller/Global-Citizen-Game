@@ -1,10 +1,10 @@
-#How many questions component version 3
+#How many questions Component version 1
 #This piece of code gives the User the option of how many questions they want to answer
 #The User can choose how many questions they want to answer with the minimum number of questions the
 #User has to input being 1 and there is
 #no maximum number for how many questions they want to answer
 #If thd User inputs a value less than 1 an Error message will appear
-#If the User inputs a value more than or equal to 50 they will be asked if they wish to answer this many questions
+#If the User inputs a value more than or equal to 20 they will be asked if they wish to answer this many questions
 #If the User answer yes the program will continue
 #If the User answers no they will be advised to input a lower value
 #This component is integrated with the Yes/No Checker
@@ -48,7 +48,7 @@ def check_how_many_questions(question):
 
             #If the User's respinse is more then 50, they will be aksed if they are sure they want to answer this many questions (Y/N)
             #This functions includes the yes no checker function
-            if response >= 50:
+            if response >= 20:
                 too_many_questions = yes_no_checker("Are you sure you want to answer {} questions (Y/N)? ".format(response))
 
                 #If the User answers yes the program will continue
