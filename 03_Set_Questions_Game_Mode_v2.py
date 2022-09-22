@@ -59,6 +59,8 @@ while game_loop == "":
             #This peice of code stipulates that each time the User answer
             #the questions the the number of questions answered would increase by 1
             number_of_questions_answered += 1
+        #Breaks the Game Loop
+        break
 
     #Game Mode 2. Kraken [MEDIUM]
     elif game_mode == 2:
@@ -68,7 +70,8 @@ while game_loop == "":
             #Prints out the Question Number
             print("*****Question {} of {}*****".format(number_of_questions_answered + 1, number_of_kraken_questions))
             number_of_questions_answered += 1
-
+        #Breaks the Game Loop
+        break
     #Game Mode 3. Hydra [HARD]
     elif game_mode == 3:
 
@@ -77,4 +80,5 @@ while game_loop == "":
             #Prints out the Question Number
             print("*****Question {} of {}*****".format(number_of_questions_answered + 1, number_of_hydra_questions))
             number_of_questions_answered += 1
-
+        #Breaks the Game Loop
+        break
