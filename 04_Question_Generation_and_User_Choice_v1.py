@@ -1,7 +1,6 @@
-#Question Generation and User Choice Component
+#Question Generation and User Choice Component version 1
 
-#You use string.ascii_lowercase to get letters that label your answer alternatives. You combine letters and alternatives with zip() and store them in a dictionary as follows:
-#ascii_lowercase is being used to
+#ascii_lowercase is used to get letters that label the unlabbled list of answers. You combine letters and alternatives with zip() and store them in a dictionary
 from string import ascii_lowercase
 def user_choice_checker(question):
     while True:
@@ -109,6 +108,11 @@ quiz_questions_and_answers = {
     "Under the influence of solar UV radiation, wind, currents and other natural factors, plastic in the ocean breaks down into small particles called microplastics (particles smaller than 5 mm) \n"
     "or nanoplastics (particles smaller than 100 nm). The small size makes them easy for marine life to ingest accidentally. \n\n"
     "What is the name for the small particles that the ocean has broken down from plastic? ": [
+        "Microplastics or Nanoplastics", "Nanoparticles", "The Atom", "Ions"
+    ],
+    "Plastic waste can encourage the growth of pathogens in the ocean. According to a recent study, scientists concluded that corals that come into contact with plastic have \n"
+    "an 89 percent chance of contracting disease, compared with a 4 percent likelihood for corals that do not. \n\n"
+    "What is the percentage chance of a coral reef contracting a disease after coming in contact with plastic? ": [
         "89%", "8.9%", "57%", "70%"
     ],
     "Studies estimate there are now 15–51 trillion pieces of plastic in the world's oceans — from the equator to the poles, from Arctic ice sheets to the sea floor. \n"
@@ -170,7 +174,38 @@ quiz_questions_and_answers = {
     "Swapping products that come in plastic bottles for unpackaged alternatives (such as shampoo bars), switching wipes for reusable cloths, and choosing reusable menstrual products \n"
     "instead of disposables all help greatly too. A cupboard full of different cleaning products designed to tackle a different part of your home is really not necessary. \n"
     "A re-purposed spray bottle filled with 1 part white vinegar 2 parts warm water is just as effective, contains less harmful chemicals and results in far less plastic waste. \n"
-    "What is an action you can take to help prevent Plastic Pollution in the Ocean? "
+    "What is an action you can take to help prevent Plastic Pollution in the Ocean? ": [
+        "Buying less single-use bathroom and cleaning products and swapping them out for reusable/refillable options",
+        "Buying single-use plastic water bottles", "Buying products containing microbeads", "Buying single-use plastic bathroom and cleaning products"
+    ],
+    "A way to prevent Plastic Pollution is by purchasing second hand instead of buying new. \n"
+    "Purchasing second hand items instead of buying new avoids the plastic packaging that inevitably comes with new purchases. \n"
+    "It also means that perfectly good things that are no longer required by their current owners will not potentially end up in the ocean. \n"
+    "Furniture, books, clothes, toys, children’s clothes, baby gear, electronics, musical instruments, cars, bikes and sports equipment are all great things to look for second hand. \n"
+    "Not only is it good for the planet, it will be good for your pocket too. \n\n"
+    "Is purchasing second hand instead of buying new a good way to help prevent Plastic Pollution in the Ocean? ": [
+        "Yes", "No", "Who knows", "How should I know"
+    ],
+    "A way to prevent Plastic Pollution is by buying fewer, high quality items that are made to last. When you do need to buy something new, it’s best to invest in fewer, \n"
+    "high quality items designed to last. Buying better things, less frequently involves less plastic packaging, and often less plastic on the products themselves, or if they are made of plastic, \n"
+    "the lifetime will be longer. \n\n"
+    "Is buying fewer, high quality items that are made to last a good way to help prevent Plastic Pollution in the Ocean? ": [
+        "Yes", "No", "I do not know", "I am not sure"
+    ],
+    "A way to prevent Plastic Pollution is by choosing products made from recycled materials. \n"
+    "Choosing products made from recycled materials results in less demand for new plastic to be manufactured, while supporting this emerging consumer sector \n"
+    "which is working hard to ‘close the loop’, keeping plastic in use rather than having it end up as worthless waste. \n"
+    "We can help make a difference by creating demand for products made from recycled materials, giving plastic waste a value, so it is less likely to end up in our environment. \n\n"
+    "Which of the following is an action you can take to help prevent Plastic Pollution? ": [
+        "Buying products made from recycled plastic", "Buying single-use plastic straws", "Buying plastic cutlery", "Buying single-use plastic water bottles"
+    ],
+    "A way to prevent Plastic Pollution is by considering sharing or hiring products made of plastic instead of owning. \n"
+    "Growing up in a consumer society, this one can be hard to get our heads round, but the truth is, we don’t always need to own things \n"
+    "and with an ever-growing population on our planet with depleting finite resources, it’s not wise for us to aspire to this either. \n"
+    "So why not consider sharing or hiring instead of owning – especially with items you don’t use often such as lawnmowers, tools and other quality household, garden and leisure items. \n\n"
+    "Is sharing or hiring products made of plastic a good idea to help prevent Plastic Pollution? ": [
+        "Yes", "No", "I have not got a clue", "I have not got the faintest idea"
+    ]
 
 
 
