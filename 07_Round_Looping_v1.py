@@ -2,6 +2,7 @@
 #This component intergrates the Question Generation and User Choice and Set Questions component
 #With the respective Health each Ocean Boss has
 
+#import random is used for the random shuffling of the quiz questions and answers dictionary
 import random
 #ascii_lowercase is used to get letters that label the unlabbled list of answers. You combine letters and alternatives with zip() and store them in a dictionary
 from string import ascii_lowercase
