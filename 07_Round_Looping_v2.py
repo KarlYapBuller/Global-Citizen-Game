@@ -1,11 +1,35 @@
-#Round Looping version 1
-#This component intergrates the Question Generation and User Choice and Set Questions component
-#With the respective Health each Ocean Boss has
+#Round Looping version 2
+#This piece of code intergrates the Game History and Statistics Component
+#The Game History part of the Component was not intergrated because it did not fit the Global Citizen Game
 
 #import random is used for the random shuffling of the quiz questions and answers dictionary
 import random
 #ascii_lowercase is used to get letters that label the unlabbled list of answers. You combine letters and alternatives with zip() and store them in a dictionary
 from string import ascii_lowercase
+
+
+#Check If the User's input is valid
+def yes_no_checker(question):
+    valid = False
+    while not valid:
+        #The User response will be lowercased
+        response = input(question).lower()
+
+        #If user response is either 'yes' or 'y' the response will be outputed as yes.
+        if response == "yes" or response == "y":
+            response = "yes"
+            return response
+
+        #If user response is either 'no' or 'n' the response will be outputed as no.
+        elif response == "no" or response == "n":
+            response = "no"
+            return response
+
+        #If user response is anything other than yes or no, User will be asked to answer yes or no.
+        else:
+            print("<error> please answer Yes/No (Y/N). ")
+            print()
+
 #User Choice Checker Function
 def user_choice_checker(question):
     while True:
@@ -77,6 +101,19 @@ def game_mode_input_checker(question):
         except ValueError:
             print(error_message)
             print()
+
+def game_history_and_statistics():
+    print()
+
+    #Game Statistics
+    #Calculate Game Statistics
+    #The number of questions answered correct and incorrect is displayed to the User
+    #The percentage of how many questions the User has answered correct and how many questions they have answered incorrect
+    print("Questions Answered Correct: {} ({:.0f}%) \t|\t Questions Answered Incorrectly: {} ({:.0f}%) \t".format(questions_answered_correct,
+                                                                                                                  percent_correct,
+                                                                                                                  questions_answered_incorrect,
+                                                                                                                  percent_incorrect))
+    print()
 
 #In this dictionary the key holds the question and the value is a list that holds the answer and answer alternatives (wrong answers) to the given question
 #The firt answer in the list is the correct answer
@@ -288,6 +325,16 @@ hydra_health = 300
 
 game_loop = ""
 while game_loop == "":
+
+    #Number of questions answered
+    number_of_questions_answered = 0
+
+    #Questions answered correct
+    questions_answered_correct = 0
+
+    #Questions answered incorrect
+    questions_answered_incorrect = 0
+
     #List is used to turn to dictionary of quiz questions and answers into a list
     list_of_quiz_questions_and_answers = list(quiz_questions_and_answers.items())
     #The keys and corresponding values in the list are moved to random possitions in the list
@@ -334,21 +381,42 @@ while game_loop == "":
                 #Print Correct
                 #-20 from the Leviathen Health
                 #Print User Health and Leviathen Health
+                #The number of questions answered increases by 1
+                #The number of questions answered correct increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Correct and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 if answer == correct_answer:
                     print("Correct!")
                     leviathan_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Leviathan Health: {}".format(leviathan_health))
+                    number_of_questions_answered += 1
+                    questions_answered_correct += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
+
                 #If the User's answer is not equal to the correct answer the User get the question wrong
                 #Print Wrong and tell the User the correct answer
                 #-20 from User Health
                 #Print User Health and Leviathen Health
+                #The number of questions answered increases by 1
+                #The number of questions answered incorrect increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Correct and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 else:
                     print("Wrong!")
                     print("The answer is {}".format(correct_answer))
                     user_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Leviathan Health: {}".format(leviathan_health))
+                    number_of_questions_answered += 1
+                    questions_answered_incorrect += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
 
                 #If User is able to knock down the Leviathen Health to 0 they Win the Game
                 #Game Mode loop is broken
@@ -360,10 +428,6 @@ while game_loop == "":
                 if user_health == 0:
                     print("You Lose!")
                     break
-    #Breaks the Game Loop
-    #If User is able to knock down the Leviathen Health to 0 or If User health is knocked down to 0
-    if leviathan_health == 0 or user_health == 0:
-        break
 
     if game_mode == 2:
 
@@ -399,21 +463,42 @@ while game_loop == "":
                 #Print Correct
                 #-20 from the Kraken Health
                 #Print User Health and Kraken Health
+                #The number of questions answered increases by 1
+                #The number of questions answered correct increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Corcrect and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 if answer == correct_answer:
                     print("Correct!")
                     kraken_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Hydra Health: {}".format(kraken_health))
+                    number_of_questions_answered += 1
+                    questions_answered_correct += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
+
                 #If the User's answer is not equal to the correct answer the User get the question wrong
                 #Print Wrong and tell the User the correct answer
                 #-20 from User Health
                 #Print User Health and Kraken Health
+                #The number of questions answered increases by 1
+                #The number of questions answered incorrect increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Correct and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 else:
                     print("Wrong!")
                     print("The answer is {}".format(correct_answer))
                     user_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Hydra Health: {}".format(kraken_health))
+                    number_of_questions_answered += 1
+                    questions_answered_incorrect += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
 
                 #If User is able to knock down the Kraken Health to 0 they Win the Game
                 #Game Mode loop is broken
@@ -425,10 +510,6 @@ while game_loop == "":
                 if user_health == 0:
                     print("You Lose!")
                     break
-    #Breaks the Game Loop
-    #If User is able to knock down the Kraken Health to 0 or If User health is knocked down to 0
-    if kraken_health == 0 or user_health == 0:
-        break
 
     if game_mode == 3:
 
@@ -464,21 +545,42 @@ while game_loop == "":
                 #Print Correct
                 #-20 from the Hydra Health
                 #Print User Health and Kraken Health
+                #The number of questions answered increases by 1
+                #The number of questions answered correct increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Corcrect and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 if answer == correct_answer:
                     print("Correct!")
                     hydra_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Hydra Health: {}".format(hydra_health))
+                    number_of_questions_answered += 1
+                    questions_answered_correct += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
+
                 #If the User's answer is not equal to the correct answer the User get the question wrong
                 #Print Wrong and tell the User the correct answer
                 #-20 from User Health
                 #Print User Health and Hydra Health
+                #The number of questions answered increases by 1
+                #The number of questions answered incorrect increases by 1
+                #Percent Correct and Percent Incorrect is equal the number of questions answered correct/incorrect
+                #divided by the number of questions answered times by 100
+                #The Percent Correct and Percent Incorrect is used to calculate the Game Statisitcs in
+                #the Game History and Statistics function
                 else:
                     print("Wrong!")
                     print("The answer is {}".format(correct_answer))
                     user_health -= 20
                     print("Your Health: {}".format(user_health))
                     print("Hydra Health: {}".format(hydra_health))
+                    number_of_questions_answered += 1
+                    questions_answered_incorrect += 1
+                    percent_correct = questions_answered_correct / number_of_questions_answered * 100
+                    percent_incorrect = questions_answered_incorrect / number_of_questions_answered * 100
 
                 #If User is able to knock down the Hydra Health to 0 they Win the Game
                 #Game Mode loop is broken
@@ -490,6 +592,27 @@ while game_loop == "":
                 if user_health == 0:
                     print("You Lose!")
                     break
+
+    print()
+    #Ask the User if the want to see their Game History and Statistics
+    see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+
+    #If the User inputs 'yes' they want to see their Game History and Statistics
+    #Their Game History and Statistics will be displayed
+    if see_history_and_statistics == "yes":
+        game_history_and_statistics()
+        print()
+
+    #Breaks the Game Loop
+    #If User is able to knock down the Leviathen Health to 0 or If User health is knocked down to 0
+    if leviathan_health == 0 or user_health == 0:
+        break
+
+    #Breaks the Game Loop
+    #If User is able to knock down the Kraken Health to 0 or If User health is knocked down to 0
+    if kraken_health == 0 or user_health == 0:
+        break
+
     #Breaks the Game Loop
     #If User is able to knock down the Hydra Health to 0 or If User health is knocked down to 0
     if hydra_health == 0 or user_health == 0:
