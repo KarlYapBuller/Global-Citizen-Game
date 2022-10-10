@@ -1,6 +1,7 @@
 #Round Looping version 2
 #This piece of code intergrates the Game History and Statistics Component
 #The Game History part of the Component was not intergrated because it did not fit the Global Citizen Game
+#In conjuction with this the Function name and according variables were changed and took out the Game History part
 
 #import random is used for the random shuffling of the quiz questions and answers dictionary
 import random
@@ -102,7 +103,7 @@ def game_mode_input_checker(question):
             print(error_message)
             print()
 
-def game_history_and_statistics():
+def game_statistics():
     print()
 
     #Game Statistics
@@ -595,12 +596,12 @@ while game_loop == "":
 
     print()
     #Ask the User if the want to see their Game History and Statistics
-    see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+    see_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
     #Their Game History and Statistics will be displayed
-    if see_history_and_statistics == "yes":
-        game_history_and_statistics()
+    if see_statistics == "yes":
+        game_statistics()
         print()
 
     #Breaks the Game Loop
