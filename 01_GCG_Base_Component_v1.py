@@ -28,6 +28,28 @@ def yes_no_checker(question):
             print("<error> please answer Yes/No (Y/N). ")
             print()
 
+#Game Information Function
+#Instructs the User on how the Global Citizen Game works and how to play the Global Citizen Game
+def game_information():
+    print("*****Game information*****")
+    print("The Global Citizen Game is a fun, engaging Quiz type game where you learn about the damage Plastic Pollution is doing to the Ocean. \n"
+          "By playing this Game you will be able to become more aware of this Global environmental problem and you will learn postive ways/actions \n"
+          "you can take te reduce plastic waste. \n"
+          "As soon as the game starts you will be asked what Game Mode you want to play. To win this Game you have to defeat a boss. \n"
+          "There are three different options/bosses you can choose from. (1. Leviathan [EASY] 2. Kraken [MEDIUM] 3. Hydra [HARD]) \n" 
+          "In the Leviathan Game Mode: You will be given 100 Health Points while the Leviathan will have 100 Health Points \n"
+          "In the Kraken Game Mode: You will be given 100 Health Points while the Leviathan will have 200 Health Points \n"
+          "In the Kraken Game Mode: You will be given 100 Health Points while the Leviathan will have 300 Health Points \n"
+          "After you have chosen your Game Mode you will be displayed a passage and then asked a related question \n"
+          "around the topic of Plastic Pollution in the Ocean and solutions you personally can take to stop this. \n"
+          "Each Question you get right you will damage the boss' health and subtract 20 from their Health Points \n"
+          "Conversely, each question you get wrong the boss will damage your health and subtract 20 from your Health Points \n"
+          "To WIN the Game you have to get the boss' Health Points to 0. You will LOSE the Game if the boss gets your Health Points to 0. \n"
+          "This is a lot to take in but the game is very intuitive and there should be clear instructions for you to play\n"
+          "if you get anything wrong. \n"
+          "OK Good Luck! Go have some fun! Let the Game begin! \n")
+    return""
+
 #User Choice Checker Function
 def user_choice_checker(question):
     while True:
@@ -101,7 +123,7 @@ def game_mode_input_checker(question):
             print()
 
 #Game History and Statistics Function
-def game_history_and_statistics():
+def game_statistics():
     print()
 
     statement_generator("Statistics", "%")
@@ -137,7 +159,6 @@ def statement_generator(statement, decoration):
     print(top_bottom)
 
     return ""
-
 
 #In this dictionary the key holds the question and the value is a list that holds the answer and answer alternatives (wrong answers) to the given question
 #The firt answer in the list is the correct answer
@@ -338,6 +359,31 @@ quiz_questions_and_answers = {
 
 }
 
+#Main routine goes here
+
+#Welcomes the User to the Quiz Quest Game
+statement_generator("👋 Welcome to the Global Citizen Game 👋", "-")
+print()
+
+#Heading for 'ask the User if they have played before'
+#This heading is used to draw the User attention to the given question and to get the
+#User to realise that this is an important part of the game and that they need to input an answer
+statement_generator("▶ Played Before ▶", "!")
+print()
+
+#Asks the User if they have played the Game before
+#If the User answers Yes the Game Continues
+#If the User answers No the Game Instructions are outputed to the User
+#If the User answers an invalid input an Error message will be outputed to
+#the User instructing the User to input the valid value
+played_before = yes_no_checker("Have you played this game before (Y/N)? ")
+print()
+
+#If the User answers No the Game Instructions are outputed to the User
+if played_before == "no":
+    game_information()
+    print()
+
 #User Health
 user_health = 100
 #Leaviathen Health
@@ -347,8 +393,7 @@ kraken_health = 200
 #Hydra Health
 hydra_health = 300
 
-#Main routine goes here
-
+#Game Loop
 game_loop = ""
 while game_loop == "":
 
@@ -633,12 +678,12 @@ while game_loop == "":
 
     print()
     #Ask the User if the want to see their Game History and Statistics
-    see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+    see_statistics = yes_no_checker("Do you want to see your Game Statistics (Y/N)? ")
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
     #Their Game History and Statistics will be displayed
-    if see_history_and_statistics == "yes":
-        game_history_and_statistics()
+    if see_statistics == "yes":
+        game_statistics()
         print()
 
     #Breaks the Game Loop
@@ -655,3 +700,12 @@ while game_loop == "":
     #If User is able to knock down the Hydra Health to 0 or If User health is knocked down to 0
     if hydra_health == 0 or user_health == 0:
         break
+
+#Heading for 'Thanks'
+#This heading is used to draw the User attention and thank the User for playing the Quiz Quest Game
+statement_generator("🙏 Thanks 🙏", "!")
+print()
+
+#Thanks the User for playing the Global Citizen Game
+print("Thank You for playing the Global Citizen Game 😊")
+
