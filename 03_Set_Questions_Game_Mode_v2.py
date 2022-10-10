@@ -1,4 +1,4 @@
-#How many questions and Game Mode Component version 2
+#Set Questions and Game Mode Component version 2
 
 #Game Mode Input Checker Function
 def game_mode_input_checker(question):
