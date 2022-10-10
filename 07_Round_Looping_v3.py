@@ -102,7 +102,7 @@ def game_mode_input_checker(question):
             print()
 
 #Game History and Statistics Function
-def game_history_and_statistics():
+def game_statistics():
     print()
 
     statement_generator("Statistics", "%")
@@ -634,12 +634,12 @@ while game_loop == "":
 
     print()
     #Ask the User if the want to see their Game History and Statistics
-    see_history_and_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+    see_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
     #Their Game History and Statistics will be displayed
-    if see_history_and_statistics == "yes":
-        game_history_and_statistics()
+    if see_statistics == "yes":
+        game_statistics()
         print()
 
     #Breaks the Game Loop
