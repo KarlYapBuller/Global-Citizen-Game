@@ -23,6 +23,6 @@ def statement_generator(statement, decoration):
     return ""
 
 #Main routine goes here
-statement_generator("Welcome to the Quiz Quest Game","*")
+statement_generator("Welcome to the Global Citizen Game","*")
 print()
-statement_generator("Thank You for playing the Quiz Quest Game", "-")
+statement_generator("Thank You for playing the Global Citizen Game", "-")
