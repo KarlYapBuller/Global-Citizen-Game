@@ -1,5 +1,5 @@
 #Question Generation and User Choice Component version 2
-#In this piece of code .strip() was used as an <Error> appeared in version 1 of this component when the
+#In this piece of code .strip() was used as an <Error> message appeared in version 1 of this component when the
 #User would enter a valid input but with a space before or after the a,b,c,d
 #In this piece of code the dictionary which contains the quiz questions and answers was turned into a list and then that
 #list was randomly shuffled and then turned back into a dictionary and this occured because in version 1 of this component
