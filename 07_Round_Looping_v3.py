@@ -382,6 +382,8 @@ while game_loop == "":
 
     if game_mode == 1:
 
+        print("Game Mode: Leviathan")
+
         while user_health and leviathan_health != 0:
 
             # Iterate through the dictionary (quiz_questions_and_answers) to get the key, value pair and also the index (used for the Question number)
@@ -465,6 +467,8 @@ while game_loop == "":
                     break
 
     if game_mode == 2:
+
+        print("Game Mode: Kraken")
 
         while user_health and kraken_health != 0:
 
@@ -550,6 +554,8 @@ while game_loop == "":
 
     if game_mode == 3:
 
+        print("Game Mode: Hydra")
+
         while user_health and hydra_health != 0:
 
             # Iterate through the dictionary (quiz_questions_and_answers) to get the key, value pair and also the index (used for the Question number)
@@ -634,7 +640,7 @@ while game_loop == "":
 
     print()
     #Ask the User if the want to see their Game History and Statistics
-    see_statistics = yes_no_checker("Do you want to see your Game History and Statistics (Y/N)? ")
+    see_statistics = yes_no_checker("Do you want to see your Game Statistics (Y/N)? ")
 
     #If the User inputs 'yes' they want to see their Game History and Statistics
     #Their Game History and Statistics will be displayed
