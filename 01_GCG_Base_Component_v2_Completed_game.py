@@ -14,7 +14,7 @@ def yes_no_checker(question):
     valid = False
     while not valid:
         #The User response will be lowercased
-        response = input(question).lower()
+        response = input(question).lower().strip()
 
         #If user response is either 'yes' or 'y' the response will be outputed as yes.
         if response == "yes" or response == "y":
@@ -101,7 +101,7 @@ def game_mode_input_checker(question):
 
         try:
             #It is an float input in the case the User inpurs a valid input but just with a .0
-            response = float(input(question))
+            response = float(input(question)).strip()
 
             #If User's response is 1 return the response
             if response == 1:
@@ -490,6 +490,8 @@ while game_loop == "":
 
     if game_mode == 1:
 
+        statement_generator("Game Mode: LEVIATHAN 🐍", "!")
+
         #Change Boss Health and Max Bass Health (for Health Bar) to 100 since User chose the Leviathan Game Mode
         boss_health += 100
         max_boss_health += 100
@@ -592,6 +594,8 @@ while game_loop == "":
 
     if game_mode == 2:
 
+        statement_generator("Game Mode: KRAKEN HEALTH 🐙", "!")
+
         #Change Boss Health and Max Bass Health (for Health Bar) to 200 since User chose the Kraken Game Mode
         boss_health += 200
         max_boss_health += 200
@@ -693,6 +697,8 @@ while game_loop == "":
                     break
 
     if game_mode == 3:
+
+        statement_generator("Game Mode: HYDRA HEALTH 🐉", "!")
 
         #Change Boss Health and Max Bass Health (for Health Bar) to 300 since User chose the Hydra Game Mode
         boss_health += 300
