@@ -1,5 +1,6 @@
 #Heatlh Bar Component Version 1
-# Current Health is a float so division does not make an integer
+
+#User Health
 user_health = 50
 # Max Health
 max_health = 100
@@ -15,7 +16,7 @@ def health_bar():
   #Get the health remaining to fill as space
   remaining_health = health_dashes - current_dashes
 
-  # Convert current dashes to 8 dashes as a string
+  # Convert current dashes to dashes as a string
   health_display = '-' * current_dashes
   # Convert the remaining health to spaces as a string
   remaining_display = ' ' * remaining_health
