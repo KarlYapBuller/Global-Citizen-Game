@@ -31,6 +31,39 @@ def yes_no_checker(question):
             print("<error> please answer Yes/No (Y/N). ")
             print()
 
+#Story Line Function
+#Story Line is used to garner and raise the interest of new User's
+#time.sleep used so the User has time to read certain things and this
+#creates an atmosphere where the User does not feel rushed and overwhelmed about everything going on
+def story_line():
+    print("Where am I? ")
+    time.sleep(2)
+    print("What is this place? ")
+    time.sleep(2)
+    print("Oh... You are awake ")
+    time.sleep(2)
+    print("Let me introduce myself. My name is Blackbeard. Captain of the Vessel Queen Anne’s Revenge.  ")
+    time.sleep(2)
+    print("This morning I found you stowed away on my ship. ")
+    time.sleep(2)
+    print("Fret not I will spare your life.  ")
+    time.sleep(2)
+    print("For now... ")
+    time.sleep(2)
+    print("Recently, I have noticed an increase in Plastic Pollution in my beloved Ocean. ")
+    time.sleep(2)
+    print("As such, I have taken it upon myself to educate people I meet on the damages Plastic Pollution is doing\n"
+          "to the Ocean and possible solutions people can take to prevent Plastic Pollution. ")
+    time.sleep(2)
+    print("Since I have spared your life, I expect you to be one of these people. ")
+    time.sleep(2)
+    print("Today you will be tasked with the challenge of defeating an Ancient Mystical Sea Creature while learning\n"
+          "about Plastic Pollution.  ")
+    time.sleep(2)
+    print("Below is the following information you will need to know to defeat your chosen Ancient Mystical Sea Creature")
+    print()
+    time.sleep(2)
+
 #Game Information Function
 #Instructs the User on how the Global Citizen Game works and how to play the Global Citizen Game
 def game_information():
@@ -101,7 +134,7 @@ def game_mode_input_checker(question):
 
         try:
             #It is an float input in the case the User inpurs a valid input but just with a .0
-            response = float(input(question)).strip()
+            response = float(input(question))
 
             #If User's response is 1 return the response
             if response == 1:
@@ -191,7 +224,7 @@ def user_health_bar():
   #Get the health remaining to fill as space
   remaining_health = health_dashes - current_dashes
 
-  # Convert current dashes to 8 dashes as a string
+  # Convert current dashes to dashes as a string
   health_display = '-' * current_dashes
   # Convert the remaining health to spaces as a string
   remaining_display = ' ' * remaining_health
@@ -207,7 +240,7 @@ def boss_health_bar():
   #Get the health remaining to fill as space
   remaining_health = health_dashes - current_dashes
 
-  # Convert current dashes to 8 dashes as a string
+  # Convert current dashes to dashes as a string
   health_display = '-' * current_dashes
   # Convert the remaining health to spaces as a string
   remaining_display = ' ' * remaining_health
@@ -434,8 +467,9 @@ print()
 played_before = yes_no_checker("Have you played this game before (Y/N)? ")
 print()
 
-#If the User answers No the Game Instructions are outputed to the User
+#If the User answers No the Story Line and Game Instructions are outputted to the User
 if played_before == "no":
+    story_line()
     game_information()
     print()
     #time.sleep used so the User has time to read certain things and this
