@@ -308,7 +308,7 @@ quiz_questions_and_answers = {
     "uses oxygen as it degrades, resulting in a low level of oxygen in the seas. As oxygen levels go down, it badly affects the survival \n"
     "of marine animals, including whales, dolphins and penguins. \n\n"
     "What is the name of a toxic substance that is found in many plastic’s that pollutes the water in the ocean badly? ": [
-        "Bisphenol A, Paracetamol, Hydrochloric Acid, Ascorbic Acid "
+        "Bisphenol A", "Paracetamol", "Hydrochloric Acid", "Ascorbic Acid"
     ],
     "Plastic waste in the oceans also threatens the life of birds and other beings that depend on the oceanic life forms for their food requirements. \n"
     "Most of the time, these beings suffer because of ingestion of plastic or because of suffocation, especially birds, by merely being tricked by the \n"
@@ -368,8 +368,8 @@ quiz_questions_and_answers = {
     "Which of the following is a way for you to help prevent Plastic Pollution? ": [
         "Participate in or Organize a Beach or River Cleanup", "Throwing your Plastic into waterways", "Using single-use plastic", "Using plastic straws"
     ],
-    "A way to prevent Plastic Pollution is to avoid Products containing Microbeads. Tiny plastic particles, called “microbeads,” have become a "
-    "growing source of ocean plastic pollution in recent years. Microbeads are found in some face scrubs, toothpastes, and bodywashes, and they readily "
+    "A way to prevent Plastic Pollution is to avoid Products containing Microbeads. Tiny plastic particles, called “microbeads,” have become a \n"
+    "growing source of ocean plastic pollution in recent years. Microbeads are found in some face scrubs, toothpastes, and bodywashes, and they readily \n"
     "enter our oceans and waterways through our sewer systems and affect hundreds of marine species. \n"
     "Avoid products containing plastic microbeads by looking for “polythelene” and “polypropylene” on the ingredient labels of your cosmetic products. \n\n"
     "What is the name of the tiny plastic particles that you should avoid to help prevent Plastic Pollution? ": [
@@ -387,7 +387,7 @@ quiz_questions_and_answers = {
         "Who knows", "I have no clue", "I thought Plastic was a good thing"
     ],
     "A way to prevent Plastic Pollution is by supporting Organizations that help address the problem of Plastic Pollution. \n"
-    "There are many non-profit organizations working to reduce and eliminate ocean plastic pollution in a variety of different ways. "
+    "There are many non-profit organizations working to reduce and eliminate ocean plastic pollution in a variety of different ways. \n"
     "These organizations rely on donations from people like you to continue their important work. \n"
     "Even small donations can make a big difference! \n\n"
     "Does donating small donations even as little as $1 help support Organizations that help address the problem of Plastic Pollution? ": [
@@ -542,7 +542,7 @@ while game_loop == "":
                 statement_generator(f"Question {question_number}", "#")
                 print()
                 #Ask Question to the User
-                print(f"{question}?")
+                print(f"{question}")
                 # The correct answer to the given question is the first answer in the list of answers
                 correct_answer = unlabled_list_of_answers[0]
 
@@ -573,12 +573,13 @@ while game_loop == "":
                 #the Game History and Statistics function
                 if answer == correct_answer:
                     result = "Correct!"
-                    print(f"Result ✨: {result}| Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result}| Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n"
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     boss_health -= 20
-                    print(f"USER HEALTH 🧑: {user_health} HP")
+                    print(f"               USER HEALTH 🧑: {user_health} HP")
                     user_health_bar()
-                    print(f"LEVIATHAN HEALTH 🐍: {boss_health} HP")
+                    print(f"             LEVIATHAN HEALTH 🐍: {boss_health} HP")
                     boss_health_bar()
                     number_of_questions_answered += 1
                     questions_answered_correct += 1
@@ -598,7 +599,8 @@ while game_loop == "":
                 #the Game History and Statistics function
                 else:
                     result = "Wrong!"
-                    print(f"Result ✨: {result} | Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result} | Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n"
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     user_health -= 20
                     print(f"               USER HEALTH 🧑: {user_health} HP")
@@ -646,7 +648,7 @@ while game_loop == "":
                 statement_generator(f"Question {question_number}", "#")
                 print()
                 #Ask Question to the User
-                print(f"{question}?")
+                print(f"{question}")
                 # The correct answer to the given question is the first answer in the list of answers
                 correct_answer = unlabled_list_of_answers[0]
 
@@ -677,12 +679,13 @@ while game_loop == "":
                 # the Game History and Statistics function
                 if answer == correct_answer:
                     result = "Correct!"
-                    print(f"Result ✨: {result}| Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result}| Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n"
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     boss_health -= 20
-                    print(f"USER HEALTH 🧑: {user_health} HP")
+                    print(f"               USER HEALTH 🧑: {user_health} HP")
                     user_health_bar()
-                    print(f"KRAKEN HEALTH 🐙: {boss_health} HP")
+                    print(f"             KRAKEN HEALTH 🐙: {boss_health} HP")
                     boss_health_bar()
                     number_of_questions_answered += 1
                     questions_answered_correct += 1
@@ -702,7 +705,8 @@ while game_loop == "":
                 # the Game History and Statistics function
                 else:
                     result = "Wrong!"
-                    print(f"Result ✨: {result} | Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result} | Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n "
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     user_health -= 20
                     print(f"               USER HEALTH 🧑: {user_health} HP")
@@ -750,7 +754,7 @@ while game_loop == "":
                 statement_generator(f"Question {question_number}", "#")
                 print()
                 #Ask Question to the User
-                print(f"{question}?")
+                print(f"{question}")
                 # The correct answer to the given question is the first answer in the list of answers
                 correct_answer = unlabled_list_of_answers[0]
 
@@ -781,13 +785,13 @@ while game_loop == "":
                 # the Game History and Statistics function
                 if answer == correct_answer:
                     result = "Correct!"
-                    print(f"Result ✨: {result}| Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result}| Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n "
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     boss_health -= 20
-                    print(f"USER HEALTH 🧑: {user_health} HP")
+                    print(f"               USER HEALTH 🧑: {user_health} HP")
                     user_health_bar()
-                    print(f"HYDRA HEALTH 🐉: {boss_health} HP")
-                    boss_health_bar()
+                    print(f"             HYDRA HEALTH 🐉: {boss_health} HP")
                     number_of_questions_answered += 1
                     questions_answered_correct += 1
                     percent_correct = questions_answered_correct / number_of_questions_answered * 100
@@ -806,7 +810,8 @@ while game_loop == "":
                 # the Game History and Statistics function
                 else:
                     result = "Wrong!"
-                    print(f"Result ✨: {result} | Your Answer 🤓: {user_answer} | Correct Answer ✅: {correct_answer}")
+                    print(f"Result ✨: {result} | Your Answer 🤓: {labeled_list_of_answers.get(user_answer)} |\n "
+                          f"Correct Answer ✅: {correct_answer}")
                     print()
                     user_health -= 20
                     print(f"               USER HEALTH 🧑: {user_health} HP")
@@ -847,6 +852,8 @@ while game_loop == "":
     #time.sleep used so the User has time to read certain things and this
     #creates an atmosphere where the User does not feel rushed and overwhelmed about everything going on
     time.sleep(0.75)
+
+    print()
 
     #Ask the User if the want to see the Sources used to create this Game
     see_sources = yes_no_checker("Do you want to see the Sources used to create this Game (Y/N)? ")
