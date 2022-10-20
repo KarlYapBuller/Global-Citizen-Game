@@ -138,7 +138,7 @@ quiz_questions_and_answers = {
     "uses oxygen as it degrades, resulting in a low level of oxygen in the seas. As oxygen levels go down, it badly affects the survival \n"
     "of marine animals, including whales, dolphins and penguins. \n\n"
     "What is the name of a toxic substance that is found in many plastic’s that pollutes the water in the ocean badly? ": [
-        "Bisphenol A, Paracetamol, Hydrochloric Acid, Ascorbic Acid "
+        "Bisphenol A", "Paracetamol", "Hydrochloric Acid", "Ascorbic Acid"
     ],
     "Plastic waste in the oceans also threatens the life of birds and other beings that depend on the oceanic life forms for their food requirements. \n"
     "Most of the time, these beings suffer because of ingestion of plastic or because of suffocation, especially birds, by merely being tricked by the \n"
@@ -198,8 +198,8 @@ quiz_questions_and_answers = {
     "Which of the following is a way for you to help prevent Plastic Pollution? ": [
         "Participate in or Organize a Beach or River Cleanup", "Throwing your Plastic into waterways", "Using single-use plastic", "Using plastic straws"
     ],
-    "A way to prevent Plastic Pollution is to avoid Products containing Microbeads. Tiny plastic particles, called “microbeads,” have become a "
-    "growing source of ocean plastic pollution in recent years. Microbeads are found in some face scrubs, toothpastes, and bodywashes, and they readily "
+    "A way to prevent Plastic Pollution is to avoid Products containing Microbeads. Tiny plastic particles, called “microbeads,” have become a \n"
+    "growing source of ocean plastic pollution in recent years. Microbeads are found in some face scrubs, toothpastes, and bodywashes, and they readily \n"
     "enter our oceans and waterways through our sewer systems and affect hundreds of marine species. \n"
     "Avoid products containing plastic microbeads by looking for “polythelene” and “polypropylene” on the ingredient labels of your cosmetic products. \n\n"
     "What is the name of the tiny plastic particles that you should avoid to help prevent Plastic Pollution? ": [
