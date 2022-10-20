@@ -1,7 +1,7 @@
 #Heatlh Bar Component Version 1
 
 #User Health
-user_health = 50
+user_health = 100
 # Max Health
 max_health = 100
 # Max Displayed dashes
@@ -25,6 +25,10 @@ def health_bar():
   print("|" + health_display + remaining_display + "|")
   # Print the User's Health
   print("          {}".format(user_health))
+
+user_damage = int(input("How much damage do you want to inflict on the User? "))
+
+user_health -= user_damage
 
 #Print the Health Bar
 health_bar()
