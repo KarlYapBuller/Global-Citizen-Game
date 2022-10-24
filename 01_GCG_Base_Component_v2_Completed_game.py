@@ -42,7 +42,7 @@ def story_line():
     time.sleep(2)
     print("Oh... You are awake ")
     time.sleep(2)
-    print("Let me introduce myself. My name is Blackbeard. Captain of the Vessel Queen Anne’s Revenge.  ")
+    print("Let me introduce myself. My name is Blackbeard 💀. Captain of the Vessel Queen Anne’s Revenge ⛵.")
     time.sleep(2)
     print("This morning I found you stowed away on my ship. ")
     time.sleep(2)
@@ -72,6 +72,7 @@ def game_information():
     print("The Global Citizen Game is a fun, engaging Quiz type game where you learn about the damage Plastic Pollution is doing to the Ocean. \n"
           "By playing this Game you will be able to become more aware of this Global environmental problem and you will learn positive ways/actions \n"
           "you can take to reduce plastic waste. \n"
+          "NOTE: For optimum User Experience play this Game in FULL SCREEN."
           "As soon as the game starts you will be asked what Game Mode you want to play. To win this Game you have to defeat a boss. \n"
           "There are three different options/bosses you can choose from. (1. Leviathan [EASY] 2. Kraken [MEDIUM] 3. Hydra [HARD]) \n" 
           "In the Leviathan Game Mode: You will be given 100 Health Points while the Leviathan will have 100 Health Points \n"
